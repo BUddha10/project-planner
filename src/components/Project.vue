@@ -9,6 +9,7 @@
       border-1 border-l-8 border-red-400
       shadow-lg
     "
+    :class="{'border-green-400': project.complete}"
   >
     <div class="flex justify-between items-center">
       <h3 class="cursor-pointer" @click="showDetail = !showDetail">
@@ -24,7 +25,10 @@
         >
           delete
         </span>
-        <span class="material-icons text-gray-400 hover:text-gray-700">
+        <span
+          @click="toggleComplete"
+          class="material-icons text-gray-400 hover:text-gray-700"
+        >
           done
         </span>
       </div>
@@ -50,6 +54,15 @@ export default {
       fetch(this.url, { method: "DELETE" })
         .then(() => this.$emit("delete", this.project.id))
         .catch((err) => console.log(err));
+    },
+    toggleComplete() {
+      fetch(this.url, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ complete: !this.project.complete }),
+      })
+        .then(() => this.$emit("complete", this.project.id))
+        .cathc((err) => console.log(err));
     },
   },
 };

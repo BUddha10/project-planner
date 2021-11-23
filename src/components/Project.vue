@@ -18,7 +18,10 @@
         <span class="material-icons text-gray-400 hover:text-gray-700">
           edit
         </span>
-        <span class="material-icons text-gray-400 hover:text-gray-700">
+        <span
+          @click="deleteProject"
+          class="material-icons text-gray-400 hover:text-gray-700"
+        >
           delete
         </span>
         <span class="material-icons text-gray-400 hover:text-gray-700">
@@ -39,9 +42,22 @@ export default {
   data() {
     return {
       showDetail: false,
+      url: "http://localhost:3000/projects/" + this.project.id,
     };
+  },
+  methods: {
+    deleteProject() {
+      fetch(this.url, { method: "DELETE" })
+        .then(() => this.$emit("delete", this.project.id))
+        .catch((err) => console.log(err));
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped></style>
+
+// { // "projects": [ // { // "id": 1, // "title": "Create new home page
+banner", // "details": "Lorem ipsum", // "complete": false // }, // { // "id":
+2, // "title": "Create new home page banner", // "details": "Lorem ipsum", //
+"complete": true // } // ] }

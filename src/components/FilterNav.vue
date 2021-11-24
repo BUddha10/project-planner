@@ -43,9 +43,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-// .active {
-//   border-bottom: 5px solid green;
-// }
-</style>

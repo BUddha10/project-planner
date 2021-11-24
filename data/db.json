@@ -3,18 +3,18 @@
     {
       "title": "complete test",
       "details": "all testing is complete",
-      "complete": true,
+      "complete": false,
       "id": 3
     },
     {
       "title": "Create New Project",
-      "details": "Create new project for the portfolio and upwork profile",
-      "complete": true,
+      "details": "This is new Vue project",
+      "complete": false,
       "id": 4
     },
     {
       "title": "vue js project",
-      "details": "create vue js project to place or put into my upwork account ",
+      "details": "create new vue project",
       "complete": false,
       "id": 5
     }

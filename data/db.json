@@ -9,8 +9,14 @@
     {
       "title": "Create New Project",
       "details": "Create new project for the portfolio and upwork profile",
-      "complete": true,
+      "complete": false,
       "id": 4
+    },
+    {
+      "title": "vue js project",
+      "details": "create vue js project to place or put into my upwork account ",
+      "complete": false,
+      "id": 5
     }
   ]
 }

@@ -1,4 +1,5 @@
 <template>
+  <FilterNav @changeFilter="current = $event" :current="current"/>
   <div v-if="projects.length">
     <div v-for="project in projects" :key="project.id">
       <Project
@@ -12,14 +13,17 @@
 
 <script>
 import Project from "../components/Project.vue";
+import FilterNav from "../components/FilterNav.vue";
 export default {
   name: "home",
   components: {
     Project,
+    FilterNav,
   },
   data() {
     return {
       projects: [],
+      current: "all",
     };
   },
   mounted() {

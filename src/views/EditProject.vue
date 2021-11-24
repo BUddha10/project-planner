@@ -1,5 +1,8 @@
 <template>
-  <form class="bg-white p-5 rounded-lg shadow-lg">
+  <form
+    @submit.prevent="updateProject"
+    class="bg-white p-5 rounded-lg shadow-lg"
+  >
     <label class="block text-gray-500 text-xl lg:text-2xl font-bold mt-5 mb-2"
       >Title:</label
     >
@@ -62,9 +65,25 @@ export default {
     return {
       title: "",
       detail: "",
-      complete: false,
+
       url: "http://localhost:3000/projects/" + this.id,
     };
+  },
+  methods: {
+    updateProject() {
+      let project = {
+        title: this.title,
+        details: this.detail,
+      };
+
+      fetch(this.url, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(project),
+      }).then(() => {
+        this.$router.push("/");
+      });
+    },
   },
   mounted() {
     fetch(this.url)

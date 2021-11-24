@@ -1,14 +1,8 @@
 {
   "projects": [
     {
-      "id": 2,
-      "title": "Create new home page banner",
-      "details": "Lorem ipsum",
-      "complete": true
-    },
-    {
-      "title": "test",
-      "details": "this is done to test the working mechanism of the app",
+      "title": "complete test",
+      "details": "all testing is complete",
       "complete": true,
       "id": 3
     },

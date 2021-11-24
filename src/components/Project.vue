@@ -67,15 +67,10 @@ export default {
         body: JSON.stringify({ complete: !this.project.complete }),
       })
         .then(() => this.$emit("complete", this.project.id))
-        .cathc((err) => console.log(err));
+        .catch((err) => console.log(err));
     },
   },
 };
 </script>
 
 <style lang="scss" scoped></style>
-
-// { // "projects": [ // { // "id": 1, // "title": "Create new home page
-banner", // "details": "Lorem ipsum", // "complete": false // }, // { // "id":
-2, // "title": "Create new home page banner", // "details": "Lorem ipsum", //
-"complete": true // } // ] }

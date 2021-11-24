@@ -18,9 +18,11 @@
         {{ project.title }}
       </h3>
       <div class="flex space-x-4 cursor-pointer">
-        <span class="material-icons text-gray-400 hover:text-gray-700">
-          edit
-        </span>
+        <router-link :to="{ name: 'EditProject', params: { id: project.id } }"
+          ><span class="material-icons text-gray-400 hover:text-gray-700">
+            edit
+          </span></router-link
+        >
         <span
           @click="deleteProject"
           class="material-icons text-gray-400 hover:text-gray-700"

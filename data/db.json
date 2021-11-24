@@ -9,7 +9,7 @@
     {
       "title": "test",
       "details": "this is done to test the working mechanism of the app",
-      "complete": false,
+      "complete": true,
       "id": 3
     },
     {

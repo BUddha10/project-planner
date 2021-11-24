@@ -11,7 +11,9 @@
     "
     :class="{ 'border-green-400': project.complete }"
   >
-    <div class="flex justify-between items-center">
+    <div
+      class="flex justify-between items-center text-2xl font-bold text-gray-700"
+    >
       <h3 class="cursor-pointer" @click="showDetail = !showDetail">
         {{ project.title }}
       </h3>
@@ -28,7 +30,7 @@
         <span
           @click="toggleComplete"
           class="material-icons text-gray-400 hover:text-gray-700"
-          :class="{ 'text-green-400': project.complete }"
+          :class="{ 'text-green-500': project.complete }"
         >
           done
         </span>
@@ -36,7 +38,7 @@
     </div>
 
     <div v-if="showDetail">
-      <p class="text-2xl mt-4 text-gray-700">{{ project.details }}</p>
+      <p class="text-2xl mt-4 text-gray-600">{{ project.details }}</p>
     </div>
   </div>
 </template>

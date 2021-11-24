@@ -1,16 +1,22 @@
 {
   "projects": [
     {
-      "id": 1,
+      "id": 2,
       "title": "Create new home page banner",
       "details": "Lorem ipsum",
       "complete": true
     },
     {
-      "id": 2,
-      "title": "Create new home page banner",
-      "details": "Lorem ipsum",
-      "complete": true
+      "title": "test",
+      "details": "this is done to test the working mechanism of the app",
+      "complete": false,
+      "id": 3
+    },
+    {
+      "title": "Create New Project",
+      "details": "Create new project for the portfolio and upwork profile",
+      "complete": true,
+      "id": 4
     }
   ]
 }

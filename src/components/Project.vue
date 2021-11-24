@@ -9,7 +9,7 @@
       border-1 border-l-8 border-red-400
       shadow-lg
     "
-    :class="{'border-green-400': project.complete}"
+    :class="{ 'border-green-400': project.complete }"
   >
     <div class="flex justify-between items-center">
       <h3 class="cursor-pointer" @click="showDetail = !showDetail">
@@ -28,6 +28,7 @@
         <span
           @click="toggleComplete"
           class="material-icons text-gray-400 hover:text-gray-700"
+          :class="{ 'text-green-400': project.complete }"
         >
           done
         </span>

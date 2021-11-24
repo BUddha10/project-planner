@@ -9,7 +9,7 @@
     {
       "title": "Create New Project",
       "details": "Create new project for the portfolio and upwork profile",
-      "complete": false,
+      "complete": true,
       "id": 4
     },
     {

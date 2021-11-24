@@ -1,9 +1,9 @@
 <template>
   <form
     @submit.prevent="updateProject"
-    class="bg-white p-5 rounded-lg shadow-lg"
+    class="bg-white p-4 rounded-lg shadow-lg"
   >
-    <label class="block text-gray-500 text-xl lg:text-2xl font-bold mt-5 mb-2"
+    <label class="block text-gray-500 text-xl lg:text-2xl font-bold mt-2"
       >Title:</label
     >
     <input
@@ -21,7 +21,7 @@
         border-box
       "
     />
-    <label class="block text-gray-500 text-xl lg:text-2xl font-bold mt-5 mb-2"
+    <label class="block text-gray-500 text-xl lg:text-2xl font-bold mt-5 mb-3"
       >Details:</label
     >
     <textarea
